@@ -163,6 +163,134 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-初学数据库" class="article article-type-post" itemscope="" itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/12/24/初学数据库/" class="article-date">
+  	<time datetime="2018-12-24T09:19:18.452Z" itemprop="datePublished">2018-12-24</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="初学数据库"><a href="#初学数据库" class="headerlink" title="初学数据库"></a>初学数据库</h1><p>数据库 - 实现项目中的数据持久化</p>
+<p>数据库的类别：</p>
+<ul>
+<li>关系型数据库 - MySQL<br>特点：<br>1.理论基础：集合论和关系代数<br>2.用二维表来组织数据（行（记录）和列 （字段））<br>3.SQL - 结构化查询语言</li>
+</ul>
+<p>关系型数据库产品：</p>
+<ol>
+<li>Oracle - 甲骨文</li>
+<li>MySQL - 甲骨文 - MariaDB<br>3.DB2、SqlServer、postgresql、SQLite</li>
+</ol>
+<p>-NoSQL数据库 - Redis</p>
+<ol>
+<li>MongoDB -文档数据库 -适合量大但是价值低的数据<br>2.Redis  - KV数据库 -性能好适合做高速缓存服务<br>3.ElasticSearch - 搜索引擎</li>
+</ol>
+<ul>
+<li>Linux安装软件</li>
+</ul>
+<ol>
+<li>包管理工具 - yum / rpm</li>
+</ol>
+<p>Docker - 提供虚拟机服务，创建虚拟化容器并安装软件<br>yum -y install docker-io   安装<br>yum -y remove docker-io  - 删除<br>yum info - 查看信息<br>yum search - 搜索<br>yum list installed |grep docker -  </p>
+<p>启动Docker服务<br>systemctl start  docker  - 启动服务器<br>systemctl stop  docker - 停止虚拟服务<br>systemctl restart  docker - 重启<br>systemctl status  docker - 查看状态<br>systemctl enable  docker  - 开机自启<br>systemctl disable  docker  -  禁止服务器自启</p>
+<p>使用docker的命令<br>查看已经下载的镜像文件（安装包）：<br>docker images</p>
+<p>2.下载MySQL的镜像文件：<br>docker pull MySQL：5.7</p>
+<p>MySQL数据库超级管理员账号 - root<br>Oracle数据库超级管理员账号 - sys</p>
+<p>3.创建并运行容器<br>docker run -d -p  3306:3306 –name mysql57 -e<br>MYSQL_ROOT_PASSWORD=123456 mysql:5.7</p>
+<p>4.查看运行中的容器<br>docker ps<br>5.查看全部容器<br>docker container ls -a<br>6.停止所有的容器<br>docker stop MySQL57</p>
+<p>7.启动容器</p>
+<p>8.</p>
+<p>安装MySQL客户端工具：<br>Navicat forMySQL - 猫<br>sqlyog  - 海豚<br>toad for MySQL - 蛤蟆</p>
+<p>替代方案<br>yum -y install mariadb mariadb-server</p>
+<p>启动服务器<br>systemctl  start mariadb</p>
+<p>检查端口<br>netstat -nap | grep 3306</p>
+<p>rm -f ./*  删除该路径上的全部文件</p>
+<p>MySQL<br>退出 - ：q<br>保存退出 - ：zz<br>序列 ：set ： cu</p>
+<p>！ifconfig eth0  - 私有网址<br>w 查看有多少台连接系统</p>
+<p>exit 退出</p>
+<p>– SQL (结构化查询语言)分为三组:<br>– 1.DDL (数据定义语言): creat / drop(删除) / alter（修改）<br>– 2.DML (数据操作语言): insert / delete / update / select(重点)<br>– 3.dCL (数据控制语言): grant / revoke /commit / rollback</p>
+<p>– 创建数据库srs</p>
+<p>drop database 手别养</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+      
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-#数据库" class="article article-type-post" itemscope="" itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/12/24/#数据库/" class="article-date">
+  	<time datetime="2018-12-24T09:17:33.822Z" itemprop="datePublished">2018-12-24</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#数据库</p>
+<p>– SQL (结构化查询语言)分为三组:<br>– 1.DDL (数据定义语言): creat / drop(删除) / alter（修改）<br>– 2.DML (数据操作语言): insert / delete / update / select(重点)<br>– 3.dCL (数据控制语言): grant / revoke /commit / rollback</p>
+<p>– 如果存在名为srs的数据库就删除它（慎重）<br>drop database if exists srs;<br>– 创建数据库srs的数据库并设置默认字符集为utf-8<br>create database srs default charset utf8;<br>– 切换到srs数据库<br>use srs;</p>
+<p>– 如果存在名为tb_student就删除<br>drop table if exists tb_student;</p>
+<p>– 创建二维表来收集数据<br>– 创建学生表 tb_student<br>– 在学生表中学号可以唯一的标记一条学生记录<br>– 我们通常称这样的列为主键列<br>create table tb_student<br>(<br>stuid int not null comment ‘学号’ , – 非空约束<br>stuname varchar(10) not null comment ‘姓名’, – 判断最大长度<br>stusex bit default 1 comment ‘性别’,–  性别默认<br>stubirth date comment ‘出生日期’ ,– timestamp时间戳<br>stuaddr varchar(255) comment ‘家庭地址’, – 身份证的最大长度<br>primary key (stuid)<br>);</p>
+<p>– 修改学生表添加联系方式列<br>alter table tb_student add column stutel  char(11); – char(11)定常字符串</p>
+<p>– 修改表删除联系方式列<br>alter table tb_student drop column stutel; – 删除学生</p>
+<p>– 向学生表插入数据<br>insert into tb_student values (1001,’何志成’,1,’1998-07-13’,’四川成都’);<br>insert into tb_student values (1002,’剩菜’,0,’1998-07-11’,’云南昆明’);<br>insert into tb_student values (1003,’姚明’,1,’1976-04-03’,null),<br>(1004,’何联聪’,0,null,null),(1005,’大壮’,1,’1999-05-22’,null);</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+      
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
     <article id="post-Nginx服务器安装" class="article article-type-post" itemscope="" itemprop="blogPost">
   
     <div class="article-meta">
