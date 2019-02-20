@@ -3,23 +3,23 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
-  <title>hancc</title>
+  <title>git常用指令 | hancc</title>
 
   <!-- keywords -->
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="#数据库 – SQL (结构化查询语言)分为三组:– 1.DDL (数据定义语言): creat / drop(删除) / alter（修改）– 2.DML (数据操作语言): insert / delete / update / select(重点)– 3.dCL (数据控制语言): grant / revoke /commit / rollback – 如果存在名为srs的数据库就删除它（慎重">
+  <meta name="description" content="git常用指令1.基本指令git init &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; ——  新建git仓库git add 文件/文件夹 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; ——  将文件添加到缓存区中git add -A &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; — 添加所有内容到缓存区中git stutas &amp;nbsp;&amp;nbs">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hancc">
-<meta property="og:url" content="http://img2.imgtn.bdimg.com/it/u=1332860980,2768867230&fm=26&gp=0.jpg/2018/12/24/#数据库/index.html">
+<meta property="og:title" content="git常用指令">
+<meta property="og:url" content="http://img2.imgtn.bdimg.com/it/u=1332860980,2768867230&fm=26&gp=0.jpg/2018/12/22/git常用指令.md/index.html">
 <meta property="og:site_name" content="hancc">
-<meta property="og:description" content="#数据库 – SQL (结构化查询语言)分为三组:– 1.DDL (数据定义语言): creat / drop(删除) / alter（修改）– 2.DML (数据操作语言): insert / delete / update / select(重点)– 3.dCL (数据控制语言): grant / revoke /commit / rollback – 如果存在名为srs的数据库就删除它（慎重">
+<meta property="og:description" content="git常用指令1.基本指令git init &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; ——  新建git仓库git add 文件/文件夹 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; ——  将文件添加到缓存区中git add -A &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; — 添加所有内容到缓存区中git stutas &amp;nbsp;&amp;nbs">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-12-24T09:17:33.824Z">
+<meta property="og:updated_time" content="2019-02-20T08:59:25.539Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hancc">
-<meta name="twitter:description" content="#数据库 – SQL (结构化查询语言)分为三组:– 1.DDL (数据定义语言): creat / drop(删除) / alter（修改）– 2.DML (数据操作语言): insert / delete / update / select(重点)– 3.dCL (数据控制语言): grant / revoke /commit / rollback – 如果存在名为srs的数据库就删除它（慎重">
+<meta name="twitter:title" content="git常用指令">
+<meta name="twitter:description" content="git常用指令1.基本指令git init &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; ——  新建git仓库git add 文件/文件夹 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; ——  将文件添加到缓存区中git add -A &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; — 添加所有内容到缓存区中git stutas &amp;nbsp;&amp;nbs">
   
     <link rel="alternative" href="/atom.xml" title="hancc" type="application/atom+xml">
   
@@ -165,11 +165,11 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-#数据库" class="article article-type-post" itemscope="" itemprop="blogPost">
+      <div class="body-wrap"><article id="post-git常用指令.md" class="article article-type-post" itemscope="" itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2018/12/24/#数据库/" class="article-date">
-  	<time datetime="2018-12-24T09:17:33.822Z" itemprop="datePublished">2018-12-24</time>
+      <a href="/2018/12/22/git常用指令.md/" class="article-date">
+  	<time datetime="2018-12-22T08:00:24.540Z" itemprop="datePublished">2018-12-22</time>
 </a>
     </div>
   
@@ -178,16 +178,39 @@
       <input type="hidden" class="isFancy">
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      git常用指令
+      
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#数据库</p>
-<p>– SQL (结构化查询语言)分为三组:<br>– 1.DDL (数据定义语言): creat / drop(删除) / alter（修改）<br>– 2.DML (数据操作语言): insert / delete / update / select(重点)<br>– 3.dCL (数据控制语言): grant / revoke /commit / rollback</p>
-<p>– 如果存在名为srs的数据库就删除它（慎重）<br>drop database if exists srs;<br>– 创建数据库srs的数据库并设置默认字符集为utf-8<br>create database srs default charset utf8;<br>– 切换到srs数据库<br>use srs;</p>
-<p>– 如果存在名为tb_student就删除<br>drop table if exists tb_student;</p>
-<p>– 创建二维表来收集数据<br>– 创建学生表 tb_student<br>– 在学生表中学号可以唯一的标记一条学生记录<br>– 我们通常称这样的列为主键列<br>create table tb_student<br>(<br>stuid int not null comment ‘学号’ , – 非空约束<br>stuname varchar(10) not null comment ‘姓名’, – 判断最大长度<br>stusex bit default 1 comment ‘性别’,–  性别默认<br>stubirth date comment ‘出生日期’ ,– timestamp时间戳<br>stuaddr varchar(255) comment ‘家庭地址’, – 身份证的最大长度<br>primary key (stuid)<br>);</p>
-<p>– 修改学生表添加联系方式列<br>alter table tb_student add column stutel  char(11); – char(11)定常字符串</p>
-<p>– 修改表删除联系方式列<br>alter table tb_student drop column stutel; – 删除学生</p>
-<p>– 向学生表插入数据<br>insert into tb_student values (1001,’何志成’,1,’1998-07-13’,’四川成都’);<br>insert into tb_student values (1002,’剩菜’,0,’1998-07-11’,’云南昆明’);<br>insert into tb_student values (1003,’姚明’,1,’1976-04-03’,null),<br>(1004,’何联聪’,0,null,null),(1005,’大壮’,1,’1999-05-22’,null);</p>
+        <h1 id="git常用指令"><a href="#git常用指令" class="headerlink" title="git常用指令"></a>git常用指令</h1><h2 id="1-基本指令"><a href="#1-基本指令" class="headerlink" title="1.基本指令"></a>1.基本指令</h2><p><code>git init</code> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ——  新建git仓库<br><code>git add 文件/文件夹</code> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ——  将文件添加到缓存区中<br><code>git add -A</code> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; — 添加所有内容到缓存区中<br><code>git stutas</code> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;———    查看git状态<br><code>git commit -m  ‘提交信息’</code>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;——  将缓存区中的内容全部提交到git本地仓库中  </p>
+<p><code>git log</code>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;——-    查看提交日志  </p>
+<p><code>git reset  - - hard   HEAD</code>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;——   让工作目录中的内容和仓库中的内容保持一致<br><code>git reset  --hard HEAD^</code>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;——  回到上一个版本<br><code>git  reset  - - hard 版本号</code>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;——  回到指定的版本<br><code>git checkout  - -  文件名</code>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ——  从暂存区中恢复工作目录中的内容(让工作区中的指定文件，回到上次提交的时候的状态)  </p>
+<p><code>git clone &lt;url&gt;</code> - 将服务器上的项目(仓库)克隆 (使用https地址需要输入密码，使用ssh地址需要添加公钥)  </p>
+<p><code>git remote add origin 地址</code>      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;—– 关联远程仓库(只需要关联一次)</p>
+<p><code>git push [-u] origin master</code>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;—– 提交(-u在第一次提交分之的时候才用)  </p>
+<h2 id="2-分之管理"><a href="#2-分之管理" class="headerlink" title="2.分之管理"></a>2.分之管理</h2><p>创建仓库会默认给我们创建一个master分之,这个分之一般作为提交和发布分之;开发一般会自己创建一个develop分之，用来开发和测试;多人协作的时候还可能根据不同的人或者(不同的功能)创建不同的分之，用来独立开发  </p>
+<p>常见分之： master(主要是合并develop), develop(主要合并下面的其他分支), 功能/人员分之(开发)  </p>
+<p><code>git branch [-a]</code>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        - 查看分之<br><code>git branch 分之名</code>        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- 创建分之<br><code>git checkout   分支名</code>        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-   切换分之<br><code>git checkout -b 分之名</code>        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    - 切换并创建新的分之<br><code>git diff    分之1  分之2</code>        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- 查看两个分之之间的差异<br><code>git merge 分之名</code>            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- 让当前分之和指定分之进行合并     </p>
+<p>注意: 切换分之、push、pull，这些操作前要保证工作区是clean  </p>
+<p>怎么避免冲突：  不要发生多个分之对同一个文件在同一个版本下进行修改(和同伴确认和商量)</p>
 
       
     </div>
@@ -197,20 +220,15 @@
     
 <nav id="article-nav">
   
-    <a href="/2018/12/24/初学数据库.md/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/12/22/vim编辑器之神.md/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">&lt;</strong>
       <div class="article-nav-title">
         
-          初学者数据库
+          vim编辑器之神
         
       </div>
     </a>
   
-  
-    <a href="/2018/12/22/Nginx服务器安装.md/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title"></div>
-      <strong class="article-nav-caption">&gt;</strong>
-    </a>
   
 </nav>
 
@@ -218,7 +236,7 @@
 </article>
 
 
-<div class="ds-share share" data-thread-key="#数据库" data-title="" data-url="http://img2.imgtn.bdimg.com/it/u=1332860980,2768867230&amp;fm=26&amp;gp=0.jpg/2018/12/24/#数据库/" data-images="http://img3.imgtn.bdimg.com/it/u=1763330841,3076862572&amp;fm=26&amp;gp=0.jpg" data-content="">
+<div class="ds-share share" data-thread-key="git常用指令.md" data-title="git常用指令" data-url="http://img2.imgtn.bdimg.com/it/u=1332860980,2768867230&amp;fm=26&amp;gp=0.jpg/2018/12/22/git常用指令.md/" data-images="http://img3.imgtn.bdimg.com/it/u=1763330841,3076862572&amp;fm=26&amp;gp=0.jpg" data-content="git常用指令">
     <div class="ds-share-inline">
       <ul class="ds-share-icons-16">
       	<li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>

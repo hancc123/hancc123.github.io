@@ -3,28 +3,28 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
-  <title>hancc</title>
+  <title>Nginx服务器 | hancc</title>
 
   <!-- keywords -->
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="title： Nginx服务器  Nginx服务器1.阿里云添加80端口阿里云上默认只有一个22端口用来做远程登录，如果希望在阿里云上安装支持http请求的nginx服务器，需要给阿里云添加80端口  2. 安装nginxa) 添加nginx存储库   1yum install epel-release b) 安装nginx 1yum install nginx c) 运行nginxNginx不">
+  <meta name="description" content="Nginx服务器1.阿里云添加80端口阿里云上默认只有一个22端口用来做远程登录，如果希望在阿里云上安装支持http请求的nginx服务器，需要给阿里云添加80端口  2. 安装nginxa) 添加nginx存储库   1yum install epel-release b) 安装nginx 1yum install nginx c) 运行nginxNginx不会自行启动。要运行Nginx   1">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hancc">
-<meta property="og:url" content="http://img2.imgtn.bdimg.com/it/u=1332860980,2768867230&fm=26&gp=0.jpg/2018/12/22/Nginx服务器安装/index.html">
+<meta property="og:title" content="Nginx服务器">
+<meta property="og:url" content="http://img2.imgtn.bdimg.com/it/u=1332860980,2768867230&fm=26&gp=0.jpg/2018/12/22/Nginx服务器安装.md/index.html">
 <meta property="og:site_name" content="hancc">
-<meta property="og:description" content="title： Nginx服务器  Nginx服务器1.阿里云添加80端口阿里云上默认只有一个22端口用来做远程登录，如果希望在阿里云上安装支持http请求的nginx服务器，需要给阿里云添加80端口  2. 安装nginxa) 添加nginx存储库   1yum install epel-release b) 安装nginx 1yum install nginx c) 运行nginxNginx不">
+<meta property="og:description" content="Nginx服务器1.阿里云添加80端口阿里云上默认只有一个22端口用来做远程登录，如果希望在阿里云上安装支持http请求的nginx服务器，需要给阿里云添加80端口  2. 安装nginxa) 添加nginx存储库   1yum install epel-release b) 安装nginx 1yum install nginx c) 运行nginxNginx不会自行启动。要运行Nginx   1">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://img2.imgtn.bdimg.com/it/u=1332860980,2768867230&fm=26&gp=0.jpg/2018/12/22/Nginx服务器安装/img/aliyun0.png">
-<meta property="og:image" content="http://img2.imgtn.bdimg.com/it/u=1332860980,2768867230&fm=26&gp=0.jpg/2018/12/22/Nginx服务器安装/img/aliyun2.png">
-<meta property="og:image" content="http://img2.imgtn.bdimg.com/it/u=1332860980,2768867230&fm=26&gp=0.jpg/2018/12/22/Nginx服务器安装/img/aliyun3.png">
-<meta property="og:image" content="http://img2.imgtn.bdimg.com/it/u=1332860980,2768867230&fm=26&gp=0.jpg/2018/12/22/Nginx服务器安装/img/aliyun4.png">
-<meta property="og:updated_time" content="2018-12-22T08:26:36.225Z">
+<meta property="og:image" content="http://img2.imgtn.bdimg.com/it/u=1332860980,2768867230&fm=26&gp=0.jpg/2018/12/22/Nginx服务器安装.md/img/aliyun0.png">
+<meta property="og:image" content="http://img2.imgtn.bdimg.com/it/u=1332860980,2768867230&fm=26&gp=0.jpg/2018/12/22/Nginx服务器安装.md/img/aliyun2.png">
+<meta property="og:image" content="http://img2.imgtn.bdimg.com/it/u=1332860980,2768867230&fm=26&gp=0.jpg/2018/12/22/Nginx服务器安装.md/img/aliyun3.png">
+<meta property="og:image" content="http://img2.imgtn.bdimg.com/it/u=1332860980,2768867230&fm=26&gp=0.jpg/2018/12/22/Nginx服务器安装.md/img/aliyun4.png">
+<meta property="og:updated_time" content="2019-02-20T08:58:20.175Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hancc">
-<meta name="twitter:description" content="title： Nginx服务器  Nginx服务器1.阿里云添加80端口阿里云上默认只有一个22端口用来做远程登录，如果希望在阿里云上安装支持http请求的nginx服务器，需要给阿里云添加80端口  2. 安装nginxa) 添加nginx存储库   1yum install epel-release b) 安装nginx 1yum install nginx c) 运行nginxNginx不">
-<meta name="twitter:image" content="http://img2.imgtn.bdimg.com/it/u=1332860980,2768867230&fm=26&gp=0.jpg/2018/12/22/Nginx服务器安装/img/aliyun0.png">
+<meta name="twitter:title" content="Nginx服务器">
+<meta name="twitter:description" content="Nginx服务器1.阿里云添加80端口阿里云上默认只有一个22端口用来做远程登录，如果希望在阿里云上安装支持http请求的nginx服务器，需要给阿里云添加80端口  2. 安装nginxa) 添加nginx存储库   1yum install epel-release b) 安装nginx 1yum install nginx c) 运行nginxNginx不会自行启动。要运行Nginx   1">
+<meta name="twitter:image" content="http://img2.imgtn.bdimg.com/it/u=1332860980,2768867230&fm=26&gp=0.jpg/2018/12/22/Nginx服务器安装.md/img/aliyun0.png">
   
     <link rel="alternative" href="/atom.xml" title="hancc" type="application/atom+xml">
   
@@ -170,10 +170,10 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-Nginx服务器安装" class="article article-type-post" itemscope="" itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Nginx服务器安装.md" class="article article-type-post" itemscope="" itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2018/12/22/Nginx服务器安装/" class="article-date">
+      <a href="/2018/12/22/Nginx服务器安装.md/" class="article-date">
   	<time datetime="2018-12-22T08:09:37.719Z" itemprop="datePublished">2018-12-22</time>
 </a>
     </div>
@@ -183,12 +183,29 @@
       <input type="hidden" class="isFancy">
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Nginx服务器
+      
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <hr>
-<p>title： Nginx服务器</p>
-<hr>
-<h1 id="Nginx服务器"><a href="#Nginx服务器" class="headerlink" title="Nginx服务器"></a>Nginx服务器</h1><h3 id="1-阿里云添加80端口"><a href="#1-阿里云添加80端口" class="headerlink" title="1.阿里云添加80端口"></a>1.阿里云添加80端口</h3><p>阿里云上默认只有一个22端口用来做远程登录，如果希望在阿里云上安装支持http请求的nginx服务器，需要给阿里云添加80端口</p>
+        <h1 id="Nginx服务器"><a href="#Nginx服务器" class="headerlink" title="Nginx服务器"></a>Nginx服务器</h1><h3 id="1-阿里云添加80端口"><a href="#1-阿里云添加80端口" class="headerlink" title="1.阿里云添加80端口"></a>1.阿里云添加80端口</h3><p>阿里云上默认只有一个22端口用来做远程登录，如果希望在阿里云上安装支持http请求的nginx服务器，需要给阿里云添加80端口</p>
 <p><img src="./img/aliyun0.png" alt="打开安全组设置"><br><img src="./img/aliyun2.png" alt=""><br><img src="./img/aliyun3.png" alt=""><br><img src="./img/aliyun4.png" alt=""></p>
 <h3 id="2-安装nginx"><a href="#2-安装nginx" class="headerlink" title="2. 安装nginx"></a>2. 安装nginx</h3><p>a) 添加nginx存储库  </p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install epel-release</span><br></pre></td></tr></table></figure>
@@ -222,18 +239,18 @@
     
 <nav id="article-nav">
   
-    <a href="/2018/12/24/#数据库/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/12/24/#数据库.md/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">&lt;</strong>
       <div class="article-nav-title">
         
-          (no title)
+          数据库
         
       </div>
     </a>
   
   
     <a href="/2018/12/22/vim编辑器之神.md/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title"></div>
+      <div class="article-nav-title">vim编辑器之神</div>
       <strong class="article-nav-caption">&gt;</strong>
     </a>
   
@@ -243,7 +260,7 @@
 </article>
 
 
-<div class="ds-share share" data-thread-key="Nginx服务器安装" data-title="" data-url="http://img2.imgtn.bdimg.com/it/u=1332860980,2768867230&amp;fm=26&amp;gp=0.jpg/2018/12/22/Nginx服务器安装/" data-images="http://img3.imgtn.bdimg.com/it/u=1763330841,3076862572&amp;fm=26&amp;gp=0.jpg" data-content="">
+<div class="ds-share share" data-thread-key="Nginx服务器安装.md" data-title="Nginx服务器" data-url="http://img2.imgtn.bdimg.com/it/u=1332860980,2768867230&amp;fm=26&amp;gp=0.jpg/2018/12/22/Nginx服务器安装.md/" data-images="http://img3.imgtn.bdimg.com/it/u=1763330841,3076862572&amp;fm=26&amp;gp=0.jpg" data-content="Nginx服务器">
     <div class="ds-share-inline">
       <ul class="ds-share-icons-16">
       	<li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>

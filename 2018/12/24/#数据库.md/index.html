@@ -3,23 +3,23 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
-  <title>hancc</title>
+  <title>数据库 | hancc</title>
 
   <!-- keywords -->
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="#数据库 – SQL (结构化查询语言)分为三组:– 1.DDL (数据定义语言): creat / drop(删除) / alter（修改）– 2.DML (数据操作语言): insert / delete / update / select(重点)– 3.dCL (数据控制语言): grant / revoke /commit / rollback – 如果存在名为srs的数据库就删除它（慎重">
+  <meta name="description" content="– SQL (结构化查询语言)分为三组:– 1.DDL (数据定义语言): creat / drop(删除) / alter（修改）– 2.DML (数据操作语言): insert / delete / update / select(重点)– 3.dCL (数据控制语言): grant / revoke /commit / rollback – 如果存在名为srs的数据库就删除它（慎重）drop">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hancc">
-<meta property="og:url" content="http://img2.imgtn.bdimg.com/it/u=1332860980,2768867230&fm=26&gp=0.jpg/2018/12/24/#数据库/index.html">
+<meta property="og:title" content="数据库">
+<meta property="og:url" content="http://img2.imgtn.bdimg.com/it/u=1332860980,2768867230&fm=26&gp=0.jpg/2018/12/24/#数据库.md/index.html">
 <meta property="og:site_name" content="hancc">
-<meta property="og:description" content="#数据库 – SQL (结构化查询语言)分为三组:– 1.DDL (数据定义语言): creat / drop(删除) / alter（修改）– 2.DML (数据操作语言): insert / delete / update / select(重点)– 3.dCL (数据控制语言): grant / revoke /commit / rollback – 如果存在名为srs的数据库就删除它（慎重">
+<meta property="og:description" content="– SQL (结构化查询语言)分为三组:– 1.DDL (数据定义语言): creat / drop(删除) / alter（修改）– 2.DML (数据操作语言): insert / delete / update / select(重点)– 3.dCL (数据控制语言): grant / revoke /commit / rollback – 如果存在名为srs的数据库就删除它（慎重）drop">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-12-24T09:17:33.824Z">
+<meta property="og:updated_time" content="2019-02-20T09:00:09.239Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hancc">
-<meta name="twitter:description" content="#数据库 – SQL (结构化查询语言)分为三组:– 1.DDL (数据定义语言): creat / drop(删除) / alter（修改）– 2.DML (数据操作语言): insert / delete / update / select(重点)– 3.dCL (数据控制语言): grant / revoke /commit / rollback – 如果存在名为srs的数据库就删除它（慎重">
+<meta name="twitter:title" content="数据库">
+<meta name="twitter:description" content="– SQL (结构化查询语言)分为三组:– 1.DDL (数据定义语言): creat / drop(删除) / alter（修改）– 2.DML (数据操作语言): insert / delete / update / select(重点)– 3.dCL (数据控制语言): grant / revoke /commit / rollback – 如果存在名为srs的数据库就删除它（慎重）drop">
   
     <link rel="alternative" href="/atom.xml" title="hancc" type="application/atom+xml">
   
@@ -165,10 +165,10 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-#数据库" class="article article-type-post" itemscope="" itemprop="blogPost">
+      <div class="body-wrap"><article id="post-#数据库.md" class="article article-type-post" itemscope="" itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2018/12/24/#数据库/" class="article-date">
+      <a href="/2018/12/24/#数据库.md/" class="article-date">
   	<time datetime="2018-12-24T09:17:33.822Z" itemprop="datePublished">2018-12-24</time>
 </a>
     </div>
@@ -178,10 +178,29 @@
       <input type="hidden" class="isFancy">
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      数据库
+      
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#数据库</p>
-<p>– SQL (结构化查询语言)分为三组:<br>– 1.DDL (数据定义语言): creat / drop(删除) / alter（修改）<br>– 2.DML (数据操作语言): insert / delete / update / select(重点)<br>– 3.dCL (数据控制语言): grant / revoke /commit / rollback</p>
+        <p>– SQL (结构化查询语言)分为三组:<br>– 1.DDL (数据定义语言): creat / drop(删除) / alter（修改）<br>– 2.DML (数据操作语言): insert / delete / update / select(重点)<br>– 3.dCL (数据控制语言): grant / revoke /commit / rollback</p>
 <p>– 如果存在名为srs的数据库就删除它（慎重）<br>drop database if exists srs;<br>– 创建数据库srs的数据库并设置默认字符集为utf-8<br>create database srs default charset utf8;<br>– 切换到srs数据库<br>use srs;</p>
 <p>– 如果存在名为tb_student就删除<br>drop table if exists tb_student;</p>
 <p>– 创建二维表来收集数据<br>– 创建学生表 tb_student<br>– 在学生表中学号可以唯一的标记一条学生记录<br>– 我们通常称这样的列为主键列<br>create table tb_student<br>(<br>stuid int not null comment ‘学号’ , – 非空约束<br>stuname varchar(10) not null comment ‘姓名’, – 判断最大长度<br>stusex bit default 1 comment ‘性别’,–  性别默认<br>stubirth date comment ‘出生日期’ ,– timestamp时间戳<br>stuaddr varchar(255) comment ‘家庭地址’, – 身份证的最大长度<br>primary key (stuid)<br>);</p>
@@ -208,7 +227,7 @@
   
   
     <a href="/2018/12/22/Nginx服务器安装.md/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title"></div>
+      <div class="article-nav-title">Nginx服务器</div>
       <strong class="article-nav-caption">&gt;</strong>
     </a>
   
@@ -218,7 +237,7 @@
 </article>
 
 
-<div class="ds-share share" data-thread-key="#数据库" data-title="" data-url="http://img2.imgtn.bdimg.com/it/u=1332860980,2768867230&amp;fm=26&amp;gp=0.jpg/2018/12/24/#数据库/" data-images="http://img3.imgtn.bdimg.com/it/u=1763330841,3076862572&amp;fm=26&amp;gp=0.jpg" data-content="">
+<div class="ds-share share" data-thread-key="#数据库.md" data-title="数据库" data-url="http://img2.imgtn.bdimg.com/it/u=1332860980,2768867230&amp;fm=26&amp;gp=0.jpg/2018/12/24/#数据库.md/" data-images="http://img3.imgtn.bdimg.com/it/u=1763330841,3076862572&amp;fm=26&amp;gp=0.jpg" data-content="数据库">
     <div class="ds-share-inline">
       <ul class="ds-share-icons-16">
       	<li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>

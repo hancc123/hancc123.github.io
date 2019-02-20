@@ -163,10 +163,10 @@
 </nav>
       <div class="body-wrap">
   
-    <article id="post-HTML" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <article id="post-HTML.md" class="article article-type-post" itemscope="" itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2018/12/25/HTML/" class="article-date">
+      <a href="/2018/12/25/HTML.md/" class="article-date">
   	<time datetime="2018-12-25T12:43:19.623Z" itemprop="datePublished">2018-12-25</time>
 </a>
     </div>
@@ -176,12 +176,23 @@
       <input type="hidden" class="isFancy">
     
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/12/25/HTML.md/">
+        HTML
+        
+      </a>
+    </h1>
+  
+
+      </header>
+      
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <hr>
-<p>HTML</p>
-<hr>
-<h2 id="1-标题标签（h1-h6）"><a href="#1-标题标签（h1-h6）" class="headerlink" title="1.标题标签（h1~h6）"></a>1.标题标签（h1~h6）</h2><pre><code>双标签
+        <h2 id="1-标题标签（h1-h6）"><a href="#1-标题标签（h1-h6）" class="headerlink" title="1.标题标签（h1~h6）"></a>1.标题标签（h1~h6）</h2><pre><code>双标签
 网页中标题的部分使用标题标签
 </code></pre><h2 id="2-段落标签（p）"><a href="#2-段落标签（p）" class="headerlink" title="2.段落标签（p）"></a>2.段落标签（p）</h2><pre><code>双标签
 </code></pre><h2 id="3-文本符号和强制换行符号"><a href="#3-文本符号和强制换行符号" class="headerlink" title="3.文本符号和强制换行符号"></a>3.文本符号和强制换行符号</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
@@ -244,10 +255,10 @@ dd - 每个分组下面的元素
 
 
   
-    <article id="post-初学数据库" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <article id="post-初学数据库.md" class="article article-type-post" itemscope="" itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2018/12/24/初学数据库/" class="article-date">
+      <a href="/2018/12/24/初学数据库.md/" class="article-date">
   	<time datetime="2018-12-24T09:19:18.452Z" itemprop="datePublished">2018-12-24</time>
 </a>
     </div>
@@ -256,6 +267,20 @@ dd - 每个分组下面的元素
     
       <input type="hidden" class="isFancy">
     
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/12/24/初学数据库.md/">
+        初学者数据库
+        
+      </a>
+    </h1>
+  
+
+      </header>
+      
     
     <div class="article-entry" itemprop="articleBody">
       
@@ -324,10 +349,10 @@ dd - 每个分组下面的元素
 
 
   
-    <article id="post-#数据库" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <article id="post-#数据库.md" class="article article-type-post" itemscope="" itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2018/12/24/#数据库/" class="article-date">
+      <a href="/2018/12/24/#数据库.md/" class="article-date">
   	<time datetime="2018-12-24T09:17:33.822Z" itemprop="datePublished">2018-12-24</time>
 </a>
     </div>
@@ -337,10 +362,23 @@ dd - 每个分组下面的元素
       <input type="hidden" class="isFancy">
     
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/12/24/#数据库.md/">
+        数据库
+        
+      </a>
+    </h1>
+  
+
+      </header>
+      
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#数据库</p>
-<p>– SQL (结构化查询语言)分为三组:<br>– 1.DDL (数据定义语言): creat / drop(删除) / alter（修改）<br>– 2.DML (数据操作语言): insert / delete / update / select(重点)<br>– 3.dCL (数据控制语言): grant / revoke /commit / rollback</p>
+        <p>– SQL (结构化查询语言)分为三组:<br>– 1.DDL (数据定义语言): creat / drop(删除) / alter（修改）<br>– 2.DML (数据操作语言): insert / delete / update / select(重点)<br>– 3.dCL (数据控制语言): grant / revoke /commit / rollback</p>
 <p>– 如果存在名为srs的数据库就删除它（慎重）<br>drop database if exists srs;<br>– 创建数据库srs的数据库并设置默认字符集为utf-8<br>create database srs default charset utf8;<br>– 切换到srs数据库<br>use srs;</p>
 <p>– 如果存在名为tb_student就删除<br>drop table if exists tb_student;</p>
 <p>– 创建二维表来收集数据<br>– 创建学生表 tb_student<br>– 在学生表中学号可以唯一的标记一条学生记录<br>– 我们通常称这样的列为主键列<br>create table tb_student<br>(<br>stuid int not null comment ‘学号’ , – 非空约束<br>stuname varchar(10) not null comment ‘姓名’, – 判断最大长度<br>stusex bit default 1 comment ‘性别’,–  性别默认<br>stubirth date comment ‘出生日期’ ,– timestamp时间戳<br>stuaddr varchar(255) comment ‘家庭地址’, – 身份证的最大长度<br>primary key (stuid)<br>);</p>
@@ -372,10 +410,10 @@ dd - 每个分组下面的元素
 
 
   
-    <article id="post-Nginx服务器安装" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <article id="post-Nginx服务器安装.md" class="article article-type-post" itemscope="" itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2018/12/22/Nginx服务器安装/" class="article-date">
+      <a href="/2018/12/22/Nginx服务器安装.md/" class="article-date">
   	<time datetime="2018-12-22T08:09:37.719Z" itemprop="datePublished">2018-12-22</time>
 </a>
     </div>
@@ -385,12 +423,23 @@ dd - 每个分组下面的元素
       <input type="hidden" class="isFancy">
     
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/12/22/Nginx服务器安装.md/">
+        Nginx服务器
+        
+      </a>
+    </h1>
+  
+
+      </header>
+      
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <hr>
-<p>title： Nginx服务器</p>
-<hr>
-<h1 id="Nginx服务器"><a href="#Nginx服务器" class="headerlink" title="Nginx服务器"></a>Nginx服务器</h1><h3 id="1-阿里云添加80端口"><a href="#1-阿里云添加80端口" class="headerlink" title="1.阿里云添加80端口"></a>1.阿里云添加80端口</h3><p>阿里云上默认只有一个22端口用来做远程登录，如果希望在阿里云上安装支持http请求的nginx服务器，需要给阿里云添加80端口</p>
+        <h1 id="Nginx服务器"><a href="#Nginx服务器" class="headerlink" title="Nginx服务器"></a>Nginx服务器</h1><h3 id="1-阿里云添加80端口"><a href="#1-阿里云添加80端口" class="headerlink" title="1.阿里云添加80端口"></a>1.阿里云添加80端口</h3><p>阿里云上默认只有一个22端口用来做远程登录，如果希望在阿里云上安装支持http请求的nginx服务器，需要给阿里云添加80端口</p>
 <p><img src="./img/aliyun0.png" alt="打开安全组设置"><br><img src="./img/aliyun2.png" alt=""><br><img src="./img/aliyun3.png" alt=""><br><img src="./img/aliyun4.png" alt=""></p>
 <h3 id="2-安装nginx"><a href="#2-安装nginx" class="headerlink" title="2. 安装nginx"></a>2. 安装nginx</h3><p>a) 添加nginx存储库  </p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install epel-release</span><br></pre></td></tr></table></figure>
@@ -440,10 +489,10 @@ dd - 每个分组下面的元素
 
 
   
-    <article id="post-vim编辑器之神" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <article id="post-vim编辑器之神.md" class="article article-type-post" itemscope="" itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2018/12/22/vim编辑器之神/" class="article-date">
+      <a href="/2018/12/22/vim编辑器之神.md/" class="article-date">
   	<time datetime="2018-12-22T08:09:27.770Z" itemprop="datePublished">2018-12-22</time>
 </a>
     </div>
@@ -453,10 +502,23 @@ dd - 每个分组下面的元素
       <input type="hidden" class="isFancy">
     
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/12/22/vim编辑器之神.md/">
+        vim编辑器之神
+        
+      </a>
+    </h1>
+  
+
+      </header>
+      
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <hr>
-<h2 id="title：-vim编辑器之神"><a href="#title：-vim编辑器之神" class="headerlink" title="title： vim编辑器之神"></a>title： vim编辑器之神</h2><h1 id="vim编辑器之神"><a href="#vim编辑器之神" class="headerlink" title="vim编辑器之神"></a>vim编辑器之神</h1><h3 id="配置vimrc配置"><a href="#配置vimrc配置" class="headerlink" title="配置vimrc配置"></a>配置vimrc配置</h3><p>在shell中可以通过 <code>vim ~/.vimrc</code> 或者 <code>vim /etc/vimrc</code> 打开vimrc文件对vim进行配置。在这个文件中可以进行很多和vim相关的配置，常用的如下（如果对其他配置感兴趣的可以自己百度）：</p>
+        <h1 id="vim编辑器之神"><a href="#vim编辑器之神" class="headerlink" title="vim编辑器之神"></a>vim编辑器之神</h1><h3 id="配置vimrc配置"><a href="#配置vimrc配置" class="headerlink" title="配置vimrc配置"></a>配置vimrc配置</h3><p>在shell中可以通过 <code>vim ~/.vimrc</code> 或者 <code>vim /etc/vimrc</code> 打开vimrc文件对vim进行配置。在这个文件中可以进行很多和vim相关的配置，常用的如下（如果对其他配置感兴趣的可以自己百度）：</p>
 <p><img src="./img/vim1.png" alt=""> </p>
 <h3 id="常用操"><a href="#常用操" class="headerlink" title="常用操"></a>常用操</h3><h4 id="1-模式切换"><a href="#1-模式切换" class="headerlink" title="1.模式切换"></a>1.模式切换</h4><p>我们可以将vim分为命令模式、编辑模式和末行模式三种<br><strong>命令模式：</strong>进入vim的时候vim是处于命令模式状态下的，这个时候输入内容不会出现在编辑区  (最末什么都没有)</p>
 <p><strong>末行模式：</strong>在命令模式下输入冒号，让vim进入末行模式。在末行模式的冒号后面可以输入相关的一些指令进行相关操作  (最后有一个冒号)</p>
@@ -497,10 +559,10 @@ dd - 每个分组下面的元素
 
 
   
-    <article id="post-git常用指令" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <article id="post-git常用指令.md" class="article article-type-post" itemscope="" itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2018/12/22/git常用指令/" class="article-date">
+      <a href="/2018/12/22/git常用指令.md/" class="article-date">
   	<time datetime="2018-12-22T08:00:24.540Z" itemprop="datePublished">2018-12-22</time>
 </a>
     </div>
@@ -509,6 +571,20 @@ dd - 每个分组下面的元素
     
       <input type="hidden" class="isFancy">
     
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/12/22/git常用指令.md/">
+        git常用指令
+        
+      </a>
+    </h1>
+  
+
+      </header>
+      
     
     <div class="article-entry" itemprop="articleBody">
       
