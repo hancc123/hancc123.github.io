@@ -26,7 +26,7 @@
     <div class="bar" style="width: 0;"></div>
     <a class="icon-home image-icon" href="javascript:;"></a>
     <div title="播放/暂停" class="icon-play"></div>
-    <h3 class="subtitle">数据库</h3>
+    <h3 class="subtitle">MySQL实例运用</h3>
     <div class="social">
         <!--<div class="like-icon">-->
             <!--<a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
@@ -43,22 +43,41 @@
     <div class="section">
         <div class="article">
     <div class="main">
-        <h1 class="title">数据库</h1>
+        <h1 class="title">MySQL实例运用</h1>
         <div class="stuff">
-            <span>二月 20, 2019</span>
+            <span>二月 27, 2019</span>
             
   <ul class="post-tags-list"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/数据库/">数据库</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/零基础/">零基础</a></li></ul>
 
 
         </div>
         <div class="content markdown">
-            <p>– SQL (结构化查询语言)分为三组:<br>– 1.DDL (数据定义语言): creat / drop(删除) / alter（修改）<br>– 2.DML (数据操作语言): insert / delete / update / select(重点)<br>– 3.dCL (数据控制语言): grant / revoke /commit / rollback</p>
-<p>– 如果存在名为srs的数据库就删除它（慎重）<br>drop database if exists srs;<br>– 创建数据库srs的数据库并设置默认字符集为utf-8<br>create database srs default charset utf8;<br>– 切换到srs数据库<br>use srs;</p>
-<p>– 如果存在名为tb_student就删除<br>drop table if exists tb_student;</p>
-<p>– 创建二维表来收集数据<br>– 创建学生表 tb_student<br>– 在学生表中学号可以唯一的标记一条学生记录<br>– 我们通常称这样的列为主键列<br>create table tb_student<br>(<br>stuid int not null comment ‘学号’ , – 非空约束<br>stuname varchar(10) not null comment ‘姓名’, – 判断最大长度<br>stusex bit default 1 comment ‘性别’,–  性别默认<br>stubirth date comment ‘出生日期’ ,– timestamp时间戳<br>stuaddr varchar(255) comment ‘家庭地址’, – 身份证的最大长度<br>primary key (stuid)<br>);</p>
-<p>– 修改学生表添加联系方式列<br>alter table tb_student add column stutel  char(11); – char(11)定常字符串</p>
-<p>– 修改表删除联系方式列<br>alter table tb_student drop column stutel; – 删除学生</p>
-<p>– 向学生表插入数据<br>insert into tb_student values (1001,’何志成’,1,’1998-07-13’,’四川成都’);<br>insert into tb_student values (1002,’剩菜’,0,’1998-07-11’,’云南昆明’);<br>insert into tb_student values (1003,’姚明’,1,’1976-04-03’,null),<br>(1004,’何联聪’,0,null,null),(1005,’大壮’,1,’1999-05-22’,null);</p>
+            <p>#查询所有学生信息<br>SELECT * FROM tb_student;</p>
+<p>#查询所有课程名及学分<br>SELECT couname, credit FROM tb_course;</p>
+<p>#查询所有女学生的姓名<br>– ALTER TABLE tb_student ADD COLUMN gender bit DEFAULT 1;<br>SELECT stuname FROM tb_student WHERE gender=0;</p>
+<p>#查询所有80后学生的姓名、性别和出生日期<br>SELECT stuname, if(gender,’男’,’女’),birth FROM tb_student WHERE birth BETWEEN ‘1980-1-1’ AND ‘1989-12-31’;</p>
+<p>#查询姓 ’王‘的学生姓名和性别(模糊)<br>SELECT stuname, gender FROM tb_student WHERE stuname LIKE ‘王%’;</p>
+<p>#查询姓’王‘名字两个字的学生姓名和性别（模糊）<br>SELECT stuname, gender FROM tb_student WHERE stuname LIKE ‘王_’;</p>
+<p>#查询名字中有’义’或’大’字的学生的姓名<br>SELECT stuname FROM tb_student WHERE stuname LIKE ‘%义%’  or stuname LIKE ‘%大%’;</p>
+<p>#查询录入了家庭住址的学生姓名(空值)<br>SELECT stuname FROM tb_student WHERE addr is NOT NULL;</p>
+<p>#查询没有录入家庭地址的学生姓名(空值)<br>SELECT stuname FROM tb_student WHERE addr is NULL;</p>
+<p>#查询选过课的学生的id(去重)<br>SELECT DISTINCT stuid  FROM tb_score;</p>
+<p>#查询选过课的学生的名字(去重)<br>SELECT stuname FROM tb_student WHERE stuid in (SELECT stuid  FROM tb_score);</p>
+<p>#查询没有选过课的学生的id()<br>SELECT stuid FROM (SELECT tb_student.stuid, couid FROM tb_score<br>RIGHT JOIN tb_student on tb_score.stuid = tb_student.stuid) as t1 WHERE couid is NULL;</p>
+<p>#查询没有选过课的学生的名字()<br>SELECT stuname FROM (SELECT stuname, couid FROM tb_score<br>RIGHT JOIN tb_student on tb_score.stuid = tb_student.stuid) as t1 WHERE couid is NULL;</p>
+<p>#查询学生的家庭住址(去重)<br>SELECT DISTINCT addr FROM tb_student;</p>
+<p>#查询男学生的姓名和生日按年龄从大到小排序(排序)<br>SELECT stuname, birth FROM tb_student WHERE gender=1 ORDER BY birth ASC;</p>
+<p>#查询年龄最大的学生的出生日期(聚合函数)<br>SELECT min(birth) FROM tb_student;</p>
+<p>#查询年龄最小的学生的出生日期（聚合函数）<br>SELECT max(birth) FROM tb_student;</p>
+<p>#查询年龄最小的学生的名字和出生日期<br>SELECT stuname, birth FROM tb_student WHERE birth = (SELECT max(birth) FROM tb_student);</p>
+<p>#查询课程编号为2的课程的平均成绩(筛选和聚合函数)<br>SELECT avg(mark)  FROM tb_score WHERE couid=2;</p>
+<p>#查询学号为101的学生所有课程的总成绩(筛选和聚合函数)<br>SELECT sum(mark) FROM tb_score WHERE stuid=101;</p>
+<p>#查询男女学生的人数(分组和聚合函数)<br>SELECT if(gender,’男’,’女’) as ‘性别’,COUNT(stuid) as ‘人数’ FROM tb_student GROUP BY(gender);</p>
+<p>#查询每个学生的学号和成绩平均值(分组和聚合函数)<br>SELECT stuid,avg(mark) as avgmark FROM tb_score GROUP BY(stuid);  </p>
+<p>#查询所有学生的平均成绩<br>SELECT stuname, avgmark FROM (SELECT stuid,avg(mark) as avgmark FROM tb_score GROUP BY(stuid)) as t1<br>RIGHT JOIN tb_student ON tb_student.stuid=t1.stuid;</p>
+<p>#查询平均成绩大于等于90分的学生的学号和平均成绩<br>SELECT stuid,avg(mark) as avgmark FROM tb_score GROUP BY(stuid) HAVING avg(mark)&gt;90;  </p>
+<p>#查询年龄最大的学生的姓名(子查询)<br>SELECT stuname FROM tb_student WHERE birth=(SELECT min(birth) FROM tb_student);</p>
+<p>#查询选课学生的姓名和平均成绩(子查询和连接查询)<br>SELECT stuname, avgmark FROM (SELECT stuid, avg(mark) as avgmark FROM tb_score GROUP BY(stuid)) as temp<br>INNER JOIN tb_student on temp.stuid=tb_student.stuid;</p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
